@@ -15,6 +15,8 @@
         :id="id"
         :type="type"
         :required="required"
+        :value="modelValue"
+        @input="$emit('update:modelValue', $event.target.value)"
         class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600"
       />
     </div>
@@ -22,24 +24,37 @@
 </template>
 
 <script setup>
-// Import the useAttrs hook to access the attributes passed to the component
-import { useAttrs } from "vue";
+import { useAttrs } from 'vue'
 
-// Define the props for the component
-defineProps({
-  // Label for the input field
-  label: { type: String, required: true },
-  // ID for the input field
-  id: { type: String, required: true },
-  // Type of the input field (e.g. text, email, password)
-  type: { type: String, default: "text" },
-  // Whether the input field is required
-  required: { type: Boolean, default: false },
-  // Additional classes for the wrapper element
-  wrapperClass: { type: String, default: "" }
-});
+// Define props for the component
+const props = defineProps({
+  label: {
+    type: String,
+    required: true
+  },
+  id: {
+    type: String,
+    required: true
+  },
+  type: {
+    type: String,
+    default: 'text'
+  },
+  required: {
+    type: Boolean,
+    default: false
+  },
+  wrapperClass: {
+    type: String,
+    default: ''
+  },
+  modelValue: {
+    type: String,
+    default: ''
+  }
+})
 
-// Get the attributes passed to the component
-const attrs = useAttrs();
+// Use Vue's useAttrs to bind additional attributes
+const attrs = useAttrs()
 </script>
 
