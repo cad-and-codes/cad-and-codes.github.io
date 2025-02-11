@@ -2,7 +2,7 @@
   <div class="bg-white">
     <Header />
 
-    <HeroSection />
+    <AboutSection />
     <Divider />
     <UpperFooter />
     <Divider />
