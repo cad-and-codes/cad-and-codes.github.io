@@ -23,9 +23,6 @@
       </div>
 
       <!-- Page content -->
-      <div class="prose prose-lg mt-12 mx-auto">
-        <slot />
-      </div>
     </div>
 
     <!-- Footer component -->
