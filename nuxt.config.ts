@@ -7,7 +7,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   modules: ['@nuxtjs/mdc', '@nuxt/content'],
-
+  // Optional: Configure Nuxt Content module
+  content: {
+    // Add options here if needed
+  },
   ssr: true,
   app: {
     head: {

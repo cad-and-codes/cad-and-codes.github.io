@@ -16,28 +16,31 @@
             <p class="py-0.5 mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
               Our focus is on driving growth and optimizing operations for businesses by empowering them with efficient, cost-effective, and sustainable approaches to improve their bottom line and stay ahead of the competition.
             </p>
-            <div class="py-0.5 items-center flex flex-col sm:flex-row sm:space-x-4">
-              <a href="/contact-us" class="flex items-center w-full px-6 py-2 mb-3 text-lg text-white bg-indigo-600 rounded-full sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+            <div class="py-0.5 flex flex-col items-center sm:flex-row sm:space-x-4">
+              <NuxtLink
+                to="/contact-us"
+                class="flex items-center w-full px-6 py-2 mb-3 text-lg text-white bg-indigo-600 rounded-full hover:bg-indigo-700 sm:mb-0 sm:w-auto"
+              >
                 Contact Us
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
-        <div class="py-2 lg:pl-16 xl:pl-16 md:pl-2 items-center w-full md:w-1/2">
+        <div class="py-2 items-center w-full md:w-1/2 lg:pl-16 xl:pl-16 md:pl-2">
           <!-- Image -->
           <div class="w-full h-auto overflow-hidden rounded-xl sm:rounded-2xl">
-            <img src="/assets/page-img/about-us.jpg" alt="Hero Image" class="w-full h-auto" />
+            <img src="/assets/page-img/about-us.jpg" alt="About us image" loading="lazy" class="w-full h-auto" />
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <style scoped>
 /* Styles specific to this component */
 </style>
-<script setup></script>

@@ -17,7 +17,6 @@ import HeroSection from '~/components/HeroSection/HeroSection.vue'
 import UpperFooter from '~/components/Footer/UpperFooter.vue'
 import LowerFooter from '~/components/Footer/LowerFooter.vue'
 
-
 useSeoMeta({ 
   title: 'CAD & CODES | Home',
   description: "CAD & CODES is a software development company that specializes in web development, mobile app development, and digital marketing. We're here to help you grow your business.",
@@ -32,15 +31,9 @@ useSeoMeta({
 })
 
 useHead({
-  htmlAttrs: {
-    lang: 'en'
-  },
+  htmlAttrs: { lang: 'en' },
   link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.svg'
-    }
+    { rel: 'icon', type: 'image/png', href: '/favicon.svg' }
   ]
 })
 </script>

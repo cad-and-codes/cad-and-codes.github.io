@@ -74,17 +74,26 @@
     <!-- Agree to policies -->
     <div class="flex items-center space-x-4">
       <SwitchGroup as="div" class="flex items-center">
-        <Switch v-model="agreed" :class="[agreed ? 'bg-indigo-600' : 'bg-gray-200', 'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-indigo-600']">
+        <Switch
+          v-model="agreed"
+          :class="[
+            agreed ? 'bg-indigo-600' : 'bg-gray-200',
+            'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-indigo-600'
+          ]"
+        >
           <span class="sr-only">Agree to policies</span>
           <span
             aria-hidden="true"
-            :class="[agreed ? 'translate-x-5' : 'translate-x-0', 'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out']"
+            :class="[
+              agreed ? 'translate-x-5' : 'translate-x-0',
+              'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out'
+            ]"
           />
         </Switch>
         <SwitchLabel class="text-sm text-gray-600">
           By selecting this, you agree to our
           <a href="/privacy-policy" class="font-semibold text-indigo-600">
-            <span>Privacy Policy</span>
+            Privacy Policy
           </a>
           .
         </SwitchLabel>

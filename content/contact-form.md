@@ -1,5 +1,5 @@
 ---
-title: "Contact Form Data"
+title: Contact Form Data
 countries:
   - USA
   - Canada

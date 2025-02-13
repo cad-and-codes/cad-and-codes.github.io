@@ -15,11 +15,10 @@
       <!-- Page header -->
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-5xl">
-          {{ $route.params.slug }}
+          {{ slug }}
         </h2>
         <p class="mt-2 text-lg/8 text-gray-600">
-          Dynamic content for <strong>{{ $route.params.slug }}</strong
-          >.
+          Dynamic content for <strong>{{ slug }}</strong>.
         </p>
       </div>
 
@@ -38,29 +37,21 @@
 </template>
 
 <script setup>
-// Import Navbar and Footer components
-import Header from "~/components/Header/Header.vue";
-import Divider from "~/components/Divider.vue";
-import UpperFooter from "~/components/Footer/UpperFooter.vue";
-import LowerFooter from "~/components/Footer/LowerFooter.vue";
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import { useHead } from '@vueuse/head';
 
-//useSeoMeta({ 
-//  title: '404 | Not Found',
-//  description: "Sorry, we couldn’t find the page you’re looking for.",
-//  ogTitle: 'Your OpenGraph Title',
-//  ogDescription: 'Your OpenGraph description',
-//  ogImage: 'https://yourwebsite.com/your-image.png',
-//  ogUrl: 'https://yourwebsite.com/your-page-url',
-//  twitterTitle: 'Your Twitter Title',
-//  twitterDescription: 'Your Twitter Description',
-//  twitterImage: 'https://yourwebsite.com/your-image.png',
-//  twitterCard: 'summary'
-//})
+import Header from '~/components/Header/Header.vue';
+import Divider from '~/components/Divider.vue';
+import UpperFooter from '~/components/Footer/UpperFooter.vue';
+import LowerFooter from '~/components/Footer/LowerFooter.vue';
 
+const route = useRoute();
+const slug = computed(() => route.params.slug);
+
+// Set head metadata
 useHead({
-  htmlAttrs: {
-    lang: 'en'
-  },
+  htmlAttrs: { lang: 'en' },
   link: [
     {
       rel: 'icon',
@@ -68,11 +59,10 @@ useHead({
       href: '/favicon.svg'
     }
   ]
-})
-
+});
 </script>
 
 <style scoped>
-/* Add your styles here */
+/* Add your custom styles here */
 </style>
 

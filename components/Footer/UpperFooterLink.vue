@@ -1,27 +1,23 @@
 <template>
   <!-- Footer link component with mobile centered styling -->
   <a
-    :href="props.href"
-    class="block  text-gray-900 hover:text-blue-900  transition duration-300"
+    :href="href"
+    class="block text-gray-900 hover:text-blue-900 transition duration-300"
   >
-    <!-- Display link text -->
-    {{ props.text }}
+    {{ text }}
   </a>
 </template>
 
 <script setup>
-// Define props for the component
-const props = defineProps({
-  // The text of the link
+const { text, href } = defineProps({
   text: {
     type: String,
-    required: true
+    required: true,
   },
-  // The href of the link
   href: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
 </script>
 

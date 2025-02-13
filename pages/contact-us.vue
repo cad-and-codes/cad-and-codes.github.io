@@ -12,10 +12,10 @@
 
 <script setup>
 import Header from '~/components/Header/Header.vue'
+import Contacts from '~/components/Contact/Contacts.vue'
 import Divider from '~/components/Divider.vue'
 import UpperFooter from '~/components/Footer/UpperFooter.vue'
 import LowerFooter from '~/components/Footer/LowerFooter.vue'
-
 
 useSeoMeta({ 
   title: 'CAD & CODES | Contact Us',
