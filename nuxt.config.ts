@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/png", href: "/favicon.png" },
       ],
     },
-    baseURL: "/", // default
+    baseURL: process.env.NODE_ENV === "production" ? "/cad-and-codes.github.io/" : "/", // default
   },
 
   vite: {
