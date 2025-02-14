@@ -23,6 +23,9 @@
       </div>
 
       <!-- Page content -->
+      <div class="mt-12 prose prose-lg prose-gray-500 mx-auto">
+        <slot />
+      </div>
     </div>
 
     <!-- Footer component -->
@@ -36,7 +39,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { useHead } from '@vueuse/head';
+import { useHead } from '#imports';
 
 import Header from '~/components/Header/Header.vue';
 import Divider from '~/components/Divider.vue';
@@ -62,4 +65,6 @@ useHead({
 <style scoped>
 /* Add your custom styles here */
 </style>
+
+
 
