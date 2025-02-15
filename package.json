@@ -28,5 +28,15 @@
     "@nuxt/content": "^3.1.0",
     "@nuxtjs/mdc": "^0.13.5",
     "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "better-sqlite3",
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
   }
 }
