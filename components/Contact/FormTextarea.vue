@@ -1,10 +1,14 @@
 <template>
   <div :class="wrapperClass">
+    <!-- Label for the textarea -->
     <label :for="id" class="block text-sm font-semibold text-gray-900">
       {{ label }}
+      <!-- Append an asterisk if the field is required -->
       <span v-if="required" class="text-red-600">*</span>
     </label>
+
     <div class="mt-2.5">
+      <!-- Two-way binding for textarea using computed property -->
       <textarea
         v-model="value"
         :id="id"
@@ -20,6 +24,7 @@
 <script setup>
 import { computed } from 'vue';
 
+// Define component props with their default values and required flags
 const props = defineProps({
   label: { type: String, required: true },
   id: { type: String, required: true },
@@ -29,10 +34,17 @@ const props = defineProps({
   modelValue: { type: String, default: "" }
 });
 
+// Define event emitter for v-model update event
 const emit = defineEmits(["update:modelValue"]);
 
+/*
+  Computed property to act as a two-way binding with v-model.
+  When the textarea value changes, the setter emits an update event.
+*/
 const value = computed({
-  get: () => props.modelValue,
+  get() {
+    return props.modelValue;
+  },
   set(newValue) {
     emit("update:modelValue", newValue);
   }
@@ -40,6 +52,5 @@ const value = computed({
 </script>
 
 <style scoped>
-/* Styles specific to this component */
+/* Scoped styles for the Contact FormTextarea component */
 </style>
-

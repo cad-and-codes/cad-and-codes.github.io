@@ -1,22 +1,37 @@
 <template>
   <div class="bg-white">
+    <!-- Header Section -->
     <Header />
 
+    <!-- About Section -->
     <AboutSection />
+
+    <!-- Divider -->
     <Divider />
+
+    <!-- Upper Footer Section -->
     <UpperFooter />
+
+    <!-- Divider -->
     <Divider />
+
+    <!-- Lower Footer Section -->
     <LowerFooter />
   </div>
 </template>
 
 <script setup>
+// Import core components
 import Header from '~/components/Header/Header.vue'
 import Divider from '~/components/Divider.vue'
 import AboutSection from '~/components/AboutSection/AboutSection.vue'
 import UpperFooter from '~/components/Footer/UpperFooter.vue'
 import LowerFooter from '~/components/Footer/LowerFooter.vue'
 
+/*
+ * SEO Meta Information
+ * The useSeoMeta hook sets metadata values used by search engines and social media.
+ */
 useSeoMeta({ 
   title: 'CAD & CODES | About Us',
   description: "CAD & CODES is a software development company specializing in web development, mobile app development, and digital marketing. We're here to help you grow your business.",
@@ -30,6 +45,10 @@ useSeoMeta({
   twitterCard: 'summary'
 })
 
+/*
+ * HTML Head Configuration
+ * The useHead hook configures global HTML attributes.
+ */
 useHead({
   htmlAttrs: {
     lang: 'en'

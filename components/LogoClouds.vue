@@ -1,11 +1,14 @@
 <template>
   <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <!-- Section heading -->
       <h2 class="text-center text-lg font-semibold text-gray-900">
         Trusted by the world’s most innovative teams
       </h2>
+      <!-- Responsive grid layout for logos -->
       <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-        <template v-for="(logo, index) in logos" :key="index">
+        <!-- Using logo.alt as a unique key for each logo -->
+        <template v-for="logo in logos" :key="logo.alt">
           <img
             :class="logo.class"
             :src="logo.src"
@@ -21,6 +24,8 @@
 </template>
 
 <script setup>
+// Array of logo objects with their respective properties.
+// The 'alt' property is used as the unique key for rendering.
 const logos = [
   {
     src: "https://tailwindui.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg",
@@ -61,5 +66,5 @@ const logos = [
 </script>
 
 <style scoped>
-/* Component-specific styles can be added here */
+/* Component-specific styles can be added here if needed */
 </style>

@@ -1,10 +1,10 @@
 <template>
-  <!-- Dynamic page displaying content based on the slug from the route parameter -->
+  <!-- Main container for the dynamic page -->
   <div>
-    <!-- Navbar component -->
+    <!-- Navigation header -->
     <Header />
 
-    <!-- Main content container -->
+    <!-- Content section with a responsive container -->
     <div class="relative bg-white px-6 py-24 sm:py-32 lg:px-8">
       <!-- Background gradient effect -->
       <div
@@ -12,7 +12,7 @@
         aria-hidden="true"
       ></div>
 
-      <!-- Page header -->
+      <!-- Page header displaying the dynamic slug -->
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-5xl">
           {{ slug }}
@@ -22,13 +22,13 @@
         </p>
       </div>
 
-      <!-- Page content -->
+      <!-- Main content area for dynamic slot content -->
       <div class="mt-12 prose prose-lg prose-gray-500 mx-auto">
         <slot />
       </div>
     </div>
 
-    <!-- Footer component -->
+    <!-- Page footer with upper and lower sections separated by dividers -->
     <Divider />
     <UpperFooter />
     <Divider />
@@ -46,10 +46,13 @@ import Divider from '~/components/Divider.vue';
 import UpperFooter from '~/components/Footer/UpperFooter.vue';
 import LowerFooter from '~/components/Footer/LowerFooter.vue';
 
+// Retrieve the current route to get the dynamic slug parameter
 const route = useRoute();
+
+// Use a computed property to dynamically track the slug
 const slug = computed(() => route.params.slug);
 
-// Set head metadata
+// Set up page metadata (e.g., language attribute and favicon)
 useHead({
   htmlAttrs: { lang: 'en' },
   link: [
@@ -65,6 +68,3 @@ useHead({
 <style scoped>
 /* Add your custom styles here */
 </style>
-
-
-

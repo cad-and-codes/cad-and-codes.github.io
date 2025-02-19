@@ -1,1 +1,9 @@
+/* 
+    main.css
+    ============
+    This file imports Tailwind CSS for utility-first styling.
+    Make sure Tailwind CSS is installed and configured in your project.
+*/
+
+/* Import Tailwind CSS */
 @import "tailwindcss";

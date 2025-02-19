@@ -26,6 +26,12 @@ importers:
       better-sqlite3:
         specifier: ^11.8.1
         version: 11.8.1
+      lucide-vue:
+        specifier: ^0.475.0
+        version: 0.475.0(vue@3.5.13(typescript@5.7.3))
+      lucide-vue-next:
+        specifier: ^0.475.0
+        version: 0.475.0(vue@3.5.13(typescript@5.7.3))
       nuxt:
         specifier: ^3.15.4
         version: 3.15.4(@parcel/watcher@2.5.1)(@types/node@22.13.1)(better-sqlite3@11.8.1)(db0@0.2.3(better-sqlite3@11.8.1))(ioredis@5.5.0)(lightningcss@1.29.1)(magicast@0.3.5)(rollup@4.34.6)(terser@5.38.1)(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.38.1)(yaml@2.7.0))(yaml@2.7.0)
@@ -35,6 +41,9 @@ importers:
       vue:
         specifier: ^3.3.0
         version: 3.5.13(typescript@5.7.3)
+      vue-feather-icons:
+        specifier: ^5.1.0
+        version: 5.1.0
       vue-router:
         specifier: ^4.1.0
         version: 4.5.0(vue@3.5.13(typescript@5.7.3))
@@ -1164,6 +1173,9 @@ packages:
   b4a@1.6.7:
     resolution: {integrity: sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==}
 
+  babel-helper-vue-jsx-merge-props@2.0.3:
+    resolution: {integrity: sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg==}
+
   bail@2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
 
@@ -2258,6 +2270,16 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lucide-vue-next@0.475.0:
+    resolution: {integrity: sha512-xzotVZV7en58Gm3b60YHlxX2YGlFWSN4D5VMMhU/rC9D/pkeRqve21TPMJdHQsdqFdoRthnaB2HrzL0PQXdNeA==}
+    peerDependencies:
+      vue: '>=3.0.1'
+
+  lucide-vue@0.475.0:
+    resolution: {integrity: sha512-QDnecmykejKP8kpJ6rQRdATOD46mzUSGvzlREFZsU/GVf94xF4ykvEflziZurmGiEICVaHDhYHKgT07o8Er8yA==}
+    peerDependencies:
+      vue: ^2.6.12
 
   magic-string-ast@0.7.0:
     resolution: {integrity: sha512-686fgAHaJY7wLTFEq7nnKqeQrhqmXB19d1HnqT35Ci7BN6hbAYLZUezTQ062uUHM7ggZEQlqJ94Ftls+KDXU8Q==}
@@ -3714,6 +3736,9 @@ packages:
 
   vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
+
+  vue-feather-icons@5.1.0:
+    resolution: {integrity: sha512-ZyM2yFGmL9DYLZYHm63KV1zCQOj8czC2LzDSkxoIp9o6zMAOY4yv1FkxbX+XNUwcH3RRrAuvf25Ij7CnUUsQVA==}
 
   vue-router@4.5.0:
     resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
@@ -5237,6 +5262,8 @@ snapshots:
 
   b4a@1.6.7: {}
 
+  babel-helper-vue-jsx-merge-props@2.0.3: {}
+
   bail@2.0.2: {}
 
   balanced-match@1.0.2: {}
@@ -6364,6 +6391,14 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-vue-next@0.475.0(vue@3.5.13(typescript@5.7.3)):
+    dependencies:
+      vue: 3.5.13(typescript@5.7.3)
+
+  lucide-vue@0.475.0(vue@3.5.13(typescript@5.7.3)):
+    dependencies:
+      vue: 3.5.13(typescript@5.7.3)
 
   magic-string-ast@0.7.0:
     dependencies:
@@ -8342,6 +8377,10 @@ snapshots:
   vue-component-type-helpers@2.2.0: {}
 
   vue-devtools-stub@0.1.0: {}
+
+  vue-feather-icons@5.1.0:
+    dependencies:
+      babel-helper-vue-jsx-merge-props: 2.0.3
 
   vue-router@4.5.0(vue@3.5.13(typescript@5.7.3)):
     dependencies:

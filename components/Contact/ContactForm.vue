@@ -1,13 +1,12 @@
 <template>
   <form
-    action="#"
-    method="POST"
     class="mx-auto max-w-xl space-y-6"
     @submit.prevent="handleSubmit"
+    action="#"
+    method="POST"
   >
-    <!-- Form fields -->
+    <!-- Form Fields -->
     <div class="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
-      <!-- First name -->
       <FormInput
         v-model="formData.firstName"
         label="First name"
@@ -17,7 +16,6 @@
         placeholder="Jane Doe"
         required
       />
-      <!-- Last name -->
       <FormInput
         v-model="formData.lastName"
         label="Last name"
@@ -27,7 +25,6 @@
         placeholder="Doe"
         required
       />
-      <!-- Company -->
       <FormInput
         v-model="formData.company"
         label="Company"
@@ -37,7 +34,6 @@
         placeholder="Acme Inc."
         class="sm:col-span-2"
       />
-      <!-- Email -->
       <FormInput
         v-model="formData.email"
         label="Email"
@@ -48,30 +44,27 @@
         class="sm:col-span-2"
         required
       />
-      <!-- Phone number -->
       <FormInput
         v-model="formData.phoneNumber"
         label="Phone number"
         name="phone-number"
-        id="phone-number"
         type="tel"
         autocomplete="tel"
         placeholder="123-456-7890"
         class="sm:col-span-2"
       />
-      <!-- Message -->
       <FormTextarea
         v-model="formData.message"
         label="Message"
         name="message"
-        id="message"
         rows="4"
         placeholder="Leave a message..."
         class="sm:col-span-2"
         required
       />
     </div>
-    <!-- Agree to policies -->
+
+    <!-- Policy Agreement -->
     <div class="flex items-center space-x-4">
       <SwitchGroup as="div" class="flex items-center">
         <Switch
@@ -86,7 +79,7 @@
             aria-hidden="true"
             :class="[
               agreed ? 'translate-x-5' : 'translate-x-0',
-              'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out'
+              'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-lg transition duration-200 ease-in-out'
             ]"
           />
         </Switch>
@@ -94,12 +87,12 @@
           By selecting this, you agree to our
           <a href="/privacy-policy" class="font-semibold text-indigo-600">
             Privacy Policy
-          </a>
-          .
+          </a>.
         </SwitchLabel>
       </SwitchGroup>
     </div>
-    <!-- Submit button -->
+
+    <!-- Submit Button -->
     <div class="mt-6">
       <button
         type="submit"
@@ -118,6 +111,7 @@ import { Switch, SwitchGroup, SwitchLabel } from "@headlessui/vue";
 import FormInput from "./FormInput.vue";
 import FormTextarea from "./FormTextarea.vue";
 
+// Reactive form data
 const formData = ref({
   firstName: "",
   lastName: "",
@@ -127,13 +121,14 @@ const formData = ref({
   message: "",
 });
 
+// State for policy agreement toggle
 const agreed = ref(false);
 
+// Handle form submission
 const handleSubmit = () => {
   if (agreed.value) {
-    // Submit the form data
+    // Send formData to API or process as needed
     console.log(formData.value);
   }
 };
 </script>
-

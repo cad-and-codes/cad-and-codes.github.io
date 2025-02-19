@@ -1,23 +1,34 @@
 <template>
   <div class="bg-white">
+    <!-- Header Section -->
     <Header />
 
+    <!-- Hero Section -->
     <HeroSection />
+
+    <!-- Divider between content areas -->
     <Divider />
+
+    <!-- Upper Footer Section -->
     <UpperFooter />
+
+    <!-- Divider before the lower footer -->
     <Divider />
+
+    <!-- Lower Footer Section -->
     <LowerFooter />
   </div>
 </template>
 
 <script setup>
+// Importing required components
 import Header from '~/components/Header/Header.vue'
-import Divider from '~/components/Divider.vue'
 import HeroSection from '~/components/HeroSection/HeroSection.vue'
+import Divider from '~/components/Divider.vue'
 import UpperFooter from '~/components/Footer/UpperFooter.vue'
 import LowerFooter from '~/components/Footer/LowerFooter.vue'
 
-
+// Configure SEO metadata for the page
 useSeoMeta({ 
   title: 'CAD & CODES | Terms of Service',
   description: "CAD & CODES is a software development company that specializes in web development, mobile app development, and digital marketing. We're here to help you grow your business.",
@@ -31,6 +42,7 @@ useSeoMeta({
   twitterCard: 'summary'
 })
 
+// Set HTML attributes and include favicon using useHead
 useHead({
   htmlAttrs: {
     lang: 'en'

@@ -1,5 +1,9 @@
 <template>
-  <!-- Footer link component with mobile centered styling -->
+  <!-- 
+    Footer Link Component
+    Renders an anchor tag that navigates to the provided URL.
+    The link text is provided via a prop.
+  -->
   <a
     :href="href"
     class="block text-gray-900 hover:text-blue-900 transition duration-300"
@@ -9,6 +13,7 @@
 </template>
 
 <script setup>
+// Define the component properties (props) with type-checking and required flags.
 const { text, href } = defineProps({
   text: {
     type: String,
@@ -20,4 +25,3 @@ const { text, href } = defineProps({
   },
 });
 </script>
-

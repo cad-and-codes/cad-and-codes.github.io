@@ -1,12 +1,13 @@
 <template>
   <div :class="wrapperClass">
-    <!-- Label for the input field -->
+    <!-- Display the input label with optional required indicator -->
     <label :for="id" class="block text-sm font-medium text-gray-900">
       {{ label }}
       <span v-if="required" class="text-red-600">*</span>
     </label>
     <!-- Input field container -->
     <div class="mt-2">
+      <!-- Bind v-model for two-way data binding, and pass extra attributes -->
       <input
         v-model="value"
         v-bind="attrs"
@@ -20,9 +21,11 @@
 </template>
 
 <script setup>
+// Import Vue's composition functions
 import { computed } from 'vue'
 import { useAttrs } from 'vue'
 
+// Define component props with default values and type validations.
 const props = defineProps({
   label: { type: String, required: true },
   id: { type: String, required: true },
@@ -32,8 +35,11 @@ const props = defineProps({
   modelValue: { type: String, default: '' }
 })
 
+// Declare the custom event for v-model update.
 const emit = defineEmits(['update:modelValue'])
 
+// Create a computed property for two-way binding with v-model.
+// The getter returns current modelValue and the setter emits an update.
 const value = computed({
   get: () => props.modelValue,
   set(newValue) {
@@ -41,10 +47,10 @@ const value = computed({
   }
 })
 
+// Collect any additional attributes passed to the component.
 const attrs = useAttrs()
 </script>
 
 <style scoped>
-/* Styles specific to this component */
+/* Scoped styles for FormInput component */
 </style>
-

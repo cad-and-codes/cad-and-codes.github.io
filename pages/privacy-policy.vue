@@ -1,23 +1,34 @@
 <template>
   <div class="bg-white">
+    <!-- Header section -->
     <Header />
 
+    <!-- Hero section for a featured message -->
     <HeroSection />
+
+    <!-- Separator divider -->
     <Divider />
+
+    <!-- Upper part of the footer -->
     <UpperFooter />
+
+    <!-- Separator divider -->
     <Divider />
+
+    <!-- Lower part of the footer -->
     <LowerFooter />
   </div>
 </template>
 
 <script setup>
+// Importing components used on this page
 import Header from '~/components/Header/Header.vue'
 import Divider from '~/components/Divider.vue'
 import HeroSection from '~/components/HeroSection/HeroSection.vue'
 import UpperFooter from '~/components/Footer/UpperFooter.vue'
 import LowerFooter from '~/components/Footer/LowerFooter.vue'
 
-
+// Configure SEO metadata for the page
 useSeoMeta({ 
   title: 'CAD & CODES | Privacy Policy',
   description: "CAD & CODES is a software development company that specializes in web development, mobile app development, and digital marketing. We're here to help you grow your business.",
@@ -31,6 +42,7 @@ useSeoMeta({
   twitterCard: 'summary'
 })
 
+// Define additional head properties like language and favicon
 useHead({
   htmlAttrs: {
     lang: 'en'
