@@ -37,10 +37,7 @@ export default defineNuxtConfig({
     },
     // Set the base URL depending on the environment
     // In production, serve the app under "/cad-and-codes.github.io/", otherwise use root
-    baseURL:
-      process.env.NODE_ENV === "production"
-        ? "/cad-and-codes.github.io/"
-        : "/",
+    baseURL: "/",
   },
 
   // Vite configuration for additional plugins
