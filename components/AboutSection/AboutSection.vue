@@ -8,17 +8,17 @@
         <div class="py-2 w-full md:w-1/2 md:px-3">
           <div class="space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0">
             <!-- Headline -->
-            <h1 class="py-1 text-sm font-bold tracking-tight text-gray-900 sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <h1 class="py-2 mt-2 text-sm font-bold tracking-tight text-gray-900 sm:text-base md:text-lg lg:text-xl xl:text-2xl">
               CAD and Codes is a leading Engineering and IT Solution company known for its innovative and tailored services in computer-aided design (CAD) and cutting-edge coding.
             </h1>
             <!-- Divider component for visual separation -->
             <Divider />
             <!-- First Description Paragraph -->
-            <p class="py-0.5 mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+            <p class="py-2 mt-2 mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
               Our goal is to provide exceptional solutions to complex engineering and technology challenges with a commitment to quality, innovation, and sustainability. We take pride in delivering customized and inventive services to diverse industries, leveraging our expertise in CAD and cutting-edge coding techniques.
             </p>
             <!-- Second Description Paragraph -->
-            <p class="py-0.5 mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+            <p class="py-2 mt-2 mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
               Our focus is on driving growth and optimizing operations for businesses by empowering them with efficient, cost-effective, and sustainable approaches to improve their bottom line and stay ahead of the competition.
             </p>
             <!-- Call-to-Action Button -->
@@ -51,7 +51,7 @@
           <!-- Image Container -->
           <div class="w-full h-auto overflow-hidden rounded-xl sm:rounded-2xl">
             <img
-              src="/page-img/about-us.jpg"
+              src="/assets/page-img/about-us.jpg"
               alt="About us image"
               loading="lazy"
               class="w-full h-auto"

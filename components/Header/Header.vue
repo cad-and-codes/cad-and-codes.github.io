@@ -8,7 +8,7 @@
           <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 p-1.5">
               <span class="sr-only">CAD & CODES</span>
-              <img class="h-8 w-auto" src="/images/logo.svg" alt="CAD & CODES logo" />
+              <img class="h-8 w-auto" src="/assets/svg/cc-logo.svg" alt="CAD & CODES logo" />
             </a>
           </div>
 
@@ -48,7 +48,7 @@
             <div class="flex items-center justify-between">
               <a href="/" class="-m-1.5 p-1.5">
                 <span class="sr-only">CAD & CODES</span>
-                <img class="h-8 w-auto" src="/images/logo.svg" alt="CAD & CODES logo" />
+                <img class="h-8 w-auto" src="/assets/svg/cc-logo.svg" alt="CAD & CODES logo" />
               </a>
               <button
                 type="button"

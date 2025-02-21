@@ -6,17 +6,28 @@
         <div class="flex flex-wrap items-center sm:-mx-3">
           <!-- Text content section -->
           <div class="w-full md:w-1/2 md:px-3">
-            <div class="space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0">
+            <div
+              class="space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0"
+            >
               <!-- Hero Title -->
-              <h1 class="py-1 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
-                <span class="block xl:inline">Revolutionizing Your Industry</span>
-                <span class="block text-indigo-600 xl:inline">through Advanced Solutions</span>
+              <h1
+                class="py-2 mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl"
+              >
+                <span class="block xl:inline"
+                  >Revolutionizing Your Industry</span
+                >
+                <span class="block text-indigo-600 xl:inline"
+                  > through Advanced Solutions</span
+                >
               </h1>
               <!-- Divider component (assumes Divider component exists) -->
               <Divider />
               <!-- Description -->
-              <p class="py-0.5 mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                We drive innovation and success by combining strategic insights with cutting-edge technology.
+              <p
+                class="py-2 mt-2 mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl"
+              >
+                We drive innovation and success by combining strategic insights
+                with cutting-edge technology.
               </p>
               <!-- Call-to-action buttons -->
               <div class="py-0.5 flex flex-col sm:flex-row sm:space-x-4">
@@ -52,10 +63,12 @@
           </div>
           <!-- Image Section -->
           <div class="py-2 w-full md:w-1/2">
-            <div class="w-full h-auto overflow-hidden rounded-xl shadow-xl sm:rounded-2xl">
+            <div
+              class="w-full h-auto overflow-hidden rounded-xl shadow-xl sm:rounded-2xl"
+            >
               <!-- Lazy loaded image -->
               <img
-                src="/page-img/home.jpg"
+                src="/assets\page-img\home.jpg"
                 alt="Hero Image"
                 loading="lazy"
                 class="w-full h-auto"

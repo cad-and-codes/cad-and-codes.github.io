@@ -12,7 +12,7 @@
         <!-- Logo image -->
         <img
           class="h-8 w-auto"
-          src="/images/logo.svg"
+          src="/assets/svg/cc-logo.svg"
           alt="CAD & CODES Logo"
         />
       </a>
