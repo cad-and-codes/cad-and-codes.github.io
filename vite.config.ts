@@ -6,5 +6,5 @@ import { defineConfig } from 'vite'
 // The 'base' property sets the base path for the application when served.
 // Adjust the base URL if the application is deployed in a different subdirectory.
 export default defineConfig({
-  base: '/cad-and-codes.github.io/',
+  base: '/',
 })
